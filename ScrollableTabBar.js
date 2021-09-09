@@ -132,7 +132,8 @@ const ScrollableTabBar = createReactClass({
     return <Button
       key={`${name}_${page}`}
       accessible={true}
-      accessibilityLabel={name}
+      accessibilityLabel={`${name}. ${isTabActive ? "Seleccionado." : ""}`}
+      accessibilityRole="button"
       accessibilityTraits='button'
       onPress={() => onPressHandler(page)}
       onLayout={onLayoutHandler}
